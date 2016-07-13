@@ -28,6 +28,20 @@ $(document).ready(function() {
     $('.ryu-ready').show();
   });
 
+  $(document).keydown(function (e) {
+    if (e.keyCode == 88){
+        console.log( 'key pressed: x');
+        $('.ryu-ready').hide();
+        $('.ryu-cool').show();
+    }
+  })
+  .keyup(function (e) {
+    if (e.keyCode == 88){
+      console.log( 'x released');
+      $('.ryu-cool').hide();
+      $('.ryu-ready').show();
+    }
+  });
 });
 
 function playHadouken () {
